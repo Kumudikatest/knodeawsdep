@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "knodeawsdep.js",
         "cursor": {
-          "lineNumber": 1,
-          "column": 1
+          "lineNumber": 11,
+          "column": 25
         },
         "config": {
           "runtime": "nodejs14.x",
@@ -48,12 +48,52 @@
         "children": [],
         "isRemovable": true,
         "filePath": "package.json"
+      },
+      "2e459ded-92e7-4ad1-8221-f0af2b72ab14": {
+        "id": "2e459ded-92e7-4ad1-8221-f0af2b72ab14",
+        "parent": null,
+        "name": "krootpy.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "krootpy.py",
+        "cursor": {
+          "lineNumber": 5,
+          "column": 1
+        },
+        "config": {
+          "runtime": "python3.9",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "krootpy"
+        },
+        "triggers": [
+          {
+            "resourceName": "apigTracingAPItraceany",
+            "config": {}
+          }
+        ],
+        "lastUpdated": 1631883233360
+      },
+      "2a32612c-334d-41ae-8c3c-dcb4892c1292": {
+        "id": "2a32612c-334d-41ae-8c3c-dcb4892c1292",
+        "parent": null,
+        "name": "requirements.txt",
+        "type": "TEXT_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "requirements.txt"
       }
     },
     "openFiles": [
-      "b2e01a3d-1f86-4442-af7e-330e54d15dcc"
+      "b2e01a3d-1f86-4442-af7e-330e54d15dcc",
+      "2e459ded-92e7-4ad1-8221-f0af2b72ab14"
     ],
-    "currentFileId": "b2e01a3d-1f86-4442-af7e-330e54d15dcc",
+    "currentFileId": "2e459ded-92e7-4ad1-8221-f0af2b72ab14",
     "resources": {
       "apigTestAPIDDBresourceget": {
         "name": "apigTestAPIDDBresourceget",
@@ -107,6 +147,33 @@
             "secondaryIndexes": {}
           }
         }
+      },
+      "apigTracingAPItraceany": {
+        "name": "apigTracingAPItraceany",
+        "type": "API_GATEWAY",
+        "config": {
+          "apiType": 1,
+          "apiMode": 1,
+          "apiName": "TracingAPI",
+          "apiId": "cbph0bahj2",
+          "endpointType": "EDGE",
+          "rootResourceId": "zdbz9v0syk",
+          "existingResources": {
+            "/trace": "e7v79d",
+            "/": "zdbz9v0syk"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/trace",
+          "resourceName": "trace",
+          "resourceId": "e7v79d",
+          "restMethod": "ANY",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "test",
+          "stageDeploymentId": "otsrat",
+          "mode": 1
+        }
       }
     },
     "customTemplate": {
@@ -133,6 +200,18 @@
           "version": "2.817.0",
           "dev": true,
           "notRemovable": false
+        },
+        "mysql": {
+          "name": "mysql",
+          "version": "2.18.1",
+          "dev": false,
+          "language": "nodejs"
+        },
+        "numpy": {
+          "name": "numpy",
+          "version": "1.21.2",
+          "dev": false,
+          "language": "python"
         }
       }
     }
@@ -146,7 +225,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1631879946662
+    "lastSave": 1631883295453
   },
   "VCS_STATE": {
     "provider": "GitHub",
