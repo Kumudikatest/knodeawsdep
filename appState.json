@@ -28,13 +28,13 @@
             "config": {}
           }
         ],
-        "lastUpdated": 1631874938047,
+        "lastUpdated": 1631886511578,
         "testCases": {
           "cdc1e90c-0e4a-4385-a73f-e09e92ae588a": {
             "id": "cdc1e90c-0e4a-4385-a73f-e09e92ae588a",
             "name": "Test event",
             "functionId": "b2e01a3d-1f86-4442-af7e-330e54d15dcc",
-            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
             "eventTemplate": "hello-world"
           }
         }
@@ -76,7 +76,16 @@
             "config": {}
           }
         ],
-        "lastUpdated": 1631883233360
+        "lastUpdated": 1631886525233,
+        "testCases": {
+          "5cff71b5-e4fd-4398-a92b-02f0618b47e2": {
+            "id": "5cff71b5-e4fd-4398-a92b-02f0618b47e2",
+            "name": "Test event",
+            "functionId": "2e459ded-92e7-4ad1-8221-f0af2b72ab14",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
       },
       "2a32612c-334d-41ae-8c3c-dcb4892c1292": {
         "id": "2a32612c-334d-41ae-8c3c-dcb4892c1292",
@@ -87,11 +96,77 @@
         "children": [],
         "isRemovable": true,
         "filePath": "requirements.txt"
+      },
+      "db87be83-dc5b-4976-8f96-48338577a4fd": {
+        "id": "db87be83-dc5b-4976-8f96-48338577a4fd",
+        "parent": null,
+        "name": "ksub",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "724fa191-c356-4ad7-82c6-ea427d117b50",
+          "53e01ec7-fe23-4ef7-bb0b-d858e79d954d"
+        ],
+        "isRemovable": true,
+        "filePath": "ksub"
+      },
+      "724fa191-c356-4ad7-82c6-ea427d117b50": {
+        "id": "724fa191-c356-4ad7-82c6-ea427d117b50",
+        "parent": "db87be83-dc5b-4976-8f96-48338577a4fd",
+        "name": "ksubpy.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "ksub/ksubpy.py",
+        "cursor": {
+          "lineNumber": 6,
+          "column": 32
+        },
+        "config": {
+          "runtime": "python3.9",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "ksubpy"
+        },
+        "triggers": [
+          {
+            "resourceName": "s3cloud9Ktest",
+            "config": {
+              "type": "s3:ObjectRemoved:Delete",
+              "keyPrefix": "",
+              "keySuffix": ""
+            }
+          }
+        ],
+        "lastUpdated": 1631886271853,
+        "testCases": {
+          "2ce67b2f-454f-47e7-ab6e-0881d806041f": {
+            "id": "2ce67b2f-454f-47e7-ab6e-0881d806041f",
+            "name": "Test event",
+            "functionId": "724fa191-c356-4ad7-82c6-ea427d117b50",
+            "event": "{\r\n    \"key1\": \"value1\",\r\n    \"key2\": \"value2\",\r\n    \"key3\": \"value3\"\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "53e01ec7-fe23-4ef7-bb0b-d858e79d954d": {
+        "id": "53e01ec7-fe23-4ef7-bb0b-d858e79d954d",
+        "parent": "db87be83-dc5b-4976-8f96-48338577a4fd",
+        "name": "__init__.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "ksub/__init__.py"
       }
     },
     "openFiles": [
       "b2e01a3d-1f86-4442-af7e-330e54d15dcc",
-      "2e459ded-92e7-4ad1-8221-f0af2b72ab14"
+      "2e459ded-92e7-4ad1-8221-f0af2b72ab14",
+      "724fa191-c356-4ad7-82c6-ea427d117b50"
     ],
     "currentFileId": "2e459ded-92e7-4ad1-8221-f0af2b72ab14",
     "resources": {
@@ -174,6 +249,16 @@
           "stageDeploymentId": "otsrat",
           "mode": 1
         }
+      },
+      "s3cloud9Ktest": {
+        "name": "s3cloud9Ktest",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "name": "cloud9-ktest"
+          }
+        }
       }
     },
     "customTemplate": {
@@ -212,6 +297,12 @@
           "version": "1.21.2",
           "dev": false,
           "language": "python"
+        },
+        "scipy": {
+          "name": "scipy",
+          "version": "1.7.1",
+          "dev": false,
+          "language": "python"
         }
       }
     }
@@ -225,7 +316,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1631883295453
+    "lastSave": 1631886659914
   },
   "VCS_STATE": {
     "provider": "GitHub",
