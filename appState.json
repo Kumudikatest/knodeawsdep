@@ -1,0 +1,158 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "b2e01a3d-1f86-4442-af7e-330e54d15dcc": {
+        "id": "b2e01a3d-1f86-4442-af7e-330e54d15dcc",
+        "parent": null,
+        "name": "knodeawsdep.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "knodeawsdep.js",
+        "cursor": {
+          "lineNumber": 1,
+          "column": 1
+        },
+        "config": {
+          "runtime": "nodejs14.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "knodeawsdep"
+        },
+        "triggers": [
+          {
+            "resourceName": "apigTestAPIDDBresourceget",
+            "config": {}
+          }
+        ],
+        "lastUpdated": 1631874938047,
+        "testCases": {
+          "cdc1e90c-0e4a-4385-a73f-e09e92ae588a": {
+            "id": "cdc1e90c-0e4a-4385-a73f-e09e92ae588a",
+            "name": "Test event",
+            "functionId": "b2e01a3d-1f86-4442-af7e-330e54d15dcc",
+            "event": "{\"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\"}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      },
+      "eec28440-496c-47ef-bccf-55da702fe4e6": {
+        "id": "eec28440-496c-47ef-bccf-55da702fe4e6",
+        "parent": null,
+        "name": "package.json",
+        "type": "JSON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "package.json"
+      }
+    },
+    "openFiles": [
+      "b2e01a3d-1f86-4442-af7e-330e54d15dcc"
+    ],
+    "currentFileId": "b2e01a3d-1f86-4442-af7e-330e54d15dcc",
+    "resources": {
+      "apigTestAPIDDBresourceget": {
+        "name": "apigTestAPIDDBresourceget",
+        "type": "API_GATEWAY",
+        "config": {
+          "apiType": 1,
+          "apiMode": 1,
+          "apiName": "TestAPI",
+          "apiId": "0itznun7w3",
+          "endpointType": "EDGE",
+          "rootResourceId": "h2lelj6j7k",
+          "existingResources": {
+            "/DDBresource": "0aenia",
+            "/DDBresource/check": "70q21i",
+            "/MyLambda": "98nqbj",
+            "/": "h2lelj6j7k",
+            "/newchange/test": "k6pdhn",
+            "/newchange": "q1ox7l",
+            "/testWithSlash": "q4m4g1",
+            "/testtwospeciallambda": "q4szm3",
+            "/testtwospecialkumutest": "wey3lk"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/DDBresource",
+          "resourceName": "DDBresource",
+          "resourceId": "0aenia",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "test",
+          "stageDeploymentId": "arvi0d",
+          "mode": 1
+        }
+      },
+      "ddbKChineseAnimal": {
+        "name": "ddbKChineseAnimal",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 1,
+          "table": {
+            "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/KChineseAnimal",
+            "name": "KChineseAnimal",
+            "partitionKey": "BirthYear",
+            "partitionKeyType": "N",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "",
+            "payPerRequest": true,
+            "mode": 1,
+            "secondaryIndexes": {}
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "nodejs",
+          "version": "2.817.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.9.4",
+    "projectName": "knodeawsdep",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {},
+    "lastSave": 1631879946662
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "knodeawsdep",
+      "url": "https://github.com/Kumudikatest/knodeawsdep"
+    }
+  }
+}
