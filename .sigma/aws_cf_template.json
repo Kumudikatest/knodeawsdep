@@ -160,6 +160,7 @@
         },
         "Environment": {
           "Variables": {
+            "kumu1": "var1",
             "SIGMA_AWS_ACC_ID": {
               "Ref": "AWS::AccountId"
             }
@@ -257,6 +258,7 @@
         },
         "Environment": {
           "Variables": {
+            "kumu1": "var1",
             "SIGMA_AWS_ACC_ID": {
               "Ref": "AWS::AccountId"
             }
@@ -337,6 +339,7 @@
         },
         "Environment": {
           "Variables": {
+            "kumu1": "var1",
             "SIGMA_AWS_ACC_ID": {
               "Ref": "AWS::AccountId"
             }
@@ -521,7 +524,7 @@
         ]
       }
     },
-    "apigTestAPIDeployment1631886664905": {
+    "apigTestAPIDeployment1631887106524": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": "0itznun7w3",
@@ -532,7 +535,7 @@
         "apigTestAPIDDBresourceGET"
       ]
     },
-    "apigTracingAPIDeployment1631886664906": {
+    "apigTracingAPIDeployment1631887106524": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": "cbph0bahj2",

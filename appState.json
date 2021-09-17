@@ -28,7 +28,7 @@
             "config": {}
           }
         ],
-        "lastUpdated": 1631886511578,
+        "lastUpdated": 1631887091763,
         "testCases": {
           "cdc1e90c-0e4a-4385-a73f-e09e92ae588a": {
             "id": "cdc1e90c-0e4a-4385-a73f-e09e92ae588a",
@@ -59,7 +59,7 @@
         "isRemovable": true,
         "filePath": "krootpy.py",
         "cursor": {
-          "lineNumber": 5,
+          "lineNumber": 3,
           "column": 1
         },
         "config": {
@@ -76,7 +76,7 @@
             "config": {}
           }
         ],
-        "lastUpdated": 1631886525233,
+        "lastUpdated": 1631887072451,
         "testCases": {
           "5cff71b5-e4fd-4398-a92b-02f0618b47e2": {
             "id": "5cff71b5-e4fd-4398-a92b-02f0618b47e2",
@@ -141,7 +141,7 @@
             }
           }
         ],
-        "lastUpdated": 1631886271853,
+        "lastUpdated": 1631887077749,
         "testCases": {
           "2ce67b2f-454f-47e7-ab6e-0881d806041f": {
             "id": "2ce67b2f-454f-47e7-ab6e-0881d806041f",
@@ -168,7 +168,7 @@
       "2e459ded-92e7-4ad1-8221-f0af2b72ab14",
       "724fa191-c356-4ad7-82c6-ea427d117b50"
     ],
-    "currentFileId": "2e459ded-92e7-4ad1-8221-f0af2b72ab14",
+    "currentFileId": "b2e01a3d-1f86-4442-af7e-330e54d15dcc",
     "resources": {
       "apigTestAPIDDBresourceget": {
         "name": "apigTestAPIDDBresourceget",
@@ -264,7 +264,7 @@
     "customTemplate": {
       "syntax": "JSON",
       "overrideDefault": false,
-      "dialect": null,
+      "dialect": "CloudFormation",
       "definitions": null
     },
     "envVariables": [
@@ -275,6 +275,14 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "kumu1",
+        "varValue": "var1",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
       }
     ],
     "packageJSON": {
@@ -316,7 +324,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1631886659914
+    "lastSave": 1631887102079
   },
   "VCS_STATE": {
     "provider": "GitHub",
